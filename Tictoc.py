@@ -52,6 +52,7 @@ def full_board_check(board):
 def player_choice(board):
     
     position = ' '
+    
     while position not in '1 2 3 4 5 6 7 8 9'.split() or not space_check(board, int(position)):
         
         position = raw_input('Choose your next position: (1-9) ')
@@ -70,6 +71,7 @@ while True:
     game_on = True
 
     while game_on:
+        
         if turn == 'Player 1':
         
             
@@ -90,8 +92,8 @@ while True:
                     turn = 'Player 2'
 
         else:
-        
-            
+
+
             display_board(theBoard)
             position = player_choice(theBoard)
             place_marker(theBoard, player2_marker, position)
